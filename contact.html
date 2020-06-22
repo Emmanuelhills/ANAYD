@@ -351,6 +351,12 @@
     <script src="assets/js/jquery-plugin-collection.js"></script>
     <!-- Custom script for this template -->
     <script src="assets/js/script.js"></script>
+    <script language="JavaScript">
+        var frmvalidator  = new Validator("contactform");
+        frmvalidator.addValidation("name","req","Please provide your name"); 
+        frmvalidator.addValidation("email","req","Please provide your email"); 
+        frmvalidator.addValidation("email","email","Please enter a valid email address"); 
+        </script>
 </body>
 
 <!--Website Developed  by team Beta: Team members; Emmanuelhills, Bimbola, Micheal and Zion-->

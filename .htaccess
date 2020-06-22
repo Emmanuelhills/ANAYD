@@ -1,0 +1,21 @@
+# error page
+
+ErrorDocument 404 /error.html
+
+# Code to Make extensions on site hidden
+
+# to turn on the engine
+
+RewriteEngine on
+
+# this does not apply to directories, so if we have a folder existing on the server then dont change the anything
+
+RewriteCond %{REQUEST_FILENAME} !-directories
+
+#check for file in directory with .html extension
+
+RewriteCond %{REQUEST_FILENAME}\.html -f
+
+#this is where the rule actually show the page with the .html extension
+
+RewriteRule ^(.*)$ $1.html [NC,L]
